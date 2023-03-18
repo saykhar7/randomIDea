@@ -29,10 +29,30 @@ len = len(num5) - 1
 def num_generate():
   select1 = random.choice(num1)
   select2 = random.choice(num2)
+  while select2 ==select1:
+    select2 = random.choice(num2)
+
   select3 = random.choice(num3)
+  while(select3==select2 or select3==select1):
+    select3 = random.choice(num3)
+
+
   select4 = random.choice(num4)
+  while(select4==select3 or select4==select2 or select4==select1):
+    select4 = random.choice(num4)
+
+
+
   select5 = random.choice(num5)
+  while(select5==select4 or select5==select3 or select5==select2 or select5==select1):
+    select5 = random.choice(num5)
+
+
   powerSelect = random.choice(power)
+  while(powerSelect==select1 or powerSelect==select2 or powerSelect==select3 or powerSelect==select4 or powerSelect==select5):
+    powerSelect = random.choice(power)
+
+
 
   return (
     f"{select1}, {select2}, {select3}, {select4}, {select5}, [{powerSelect}]")
